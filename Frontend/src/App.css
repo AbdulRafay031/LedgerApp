@@ -1,0 +1,16 @@
+/* Add these styles to App.css or index.css */
+@keyframes line-progress {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
+  
+  .animate-line-progress {
+    width: 100%;
+    transform: translateX(-100%);
+    animation: line-progress 3s ease-in-out forwards;
+  }
+  
