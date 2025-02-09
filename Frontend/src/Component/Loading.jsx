@@ -1,5 +1,7 @@
 // src/Component/Loading.js
 import React, { useEffect } from "react";
+import FFImage from '../assets/FF.png';
+
 
 const Loading = ({ onComplete }) => {
   useEffect(() => {
@@ -13,7 +15,7 @@ const Loading = ({ onComplete }) => {
   return (
     <div className="h-screen flex flex-col justify-center items-center bg-black text-white">
       {/* Logo */}
-      <img src="/src/assets/FF.png" alt="Logo"
+      <img  src={FFImage} alt="Logo"
        className="w-40 h-40"
         />
 

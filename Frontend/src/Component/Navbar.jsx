@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import InstallButton from "./InstallButton.jsx";
+import FFImage from '../assets/FF.png';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,7 +12,7 @@ const Navbar = () => {
       <nav className="bg-black text-white w-full h-20 z-50 shadow-md">
         <div className="max-w-screen-xl mx-auto px-4 flex justify-between items-center h-16">
           {/* Logo */}
-          <img src="/src/assets/FF.png" alt="Logo" className="w-24 h-24" />
+          <img src={FFImage} alt="Logo" className="w-24 h-24" />
 
           {/* Hamburger Menu for Mobile */}
           <button

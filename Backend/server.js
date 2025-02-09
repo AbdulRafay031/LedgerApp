@@ -1,5 +1,6 @@
 import express from"express"
 import dotenv from"dotenv"
+import path from 'path'
 import cors from"cors"
 import {connectDB} from"./config/db.js"
 import partyRoutes from"./routes/partyRoutes.js"
@@ -8,6 +9,7 @@ import employeeRoutes from "./routes/employeeRoutes.js"
 import expenseRoutes from "./routes/expenseRoutes.js"
 import attendanceRoutes from "./routes/attendanceRoutes.js"
 
+import { fileURLToPath } from 'url'; // Import 'fileURLToPath' to convert URL to file path
 
 
 
@@ -25,9 +27,18 @@ connectDB();
 // Middleware
 app.use(cors());
 app.use(express.json());
+// Get the directory name of the current file
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+app.get('/FF', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'FF.png'));
+});
+
+app.use(express.static(path.join(__dirname, '../Frontend/dist')));
 
 // PartyRoutes
-app.use("/api/parties", partyRoutes);
+app.use("/api/parties", partyRoutes); 
 app.use("/api/user", partyRoutes);
 app.use("/api/delete", partyRoutes);
 app.use("/api/update",  partyRoutes);

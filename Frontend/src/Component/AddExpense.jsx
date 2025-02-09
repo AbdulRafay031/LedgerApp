@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { addExpense } from "../services/expenseService";
 import { toast, ToastContainer } from 'react-toastify'; // Import toast methods
-import 'react-toastify/dist/ReactToastify.css'; // Import toast styles
+import 'react-toastify/dist/ReactToastify.css'; 
 
 const AddExpense = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
