@@ -8,7 +8,7 @@ import Home from "./Component/Home";
 import PartyAccount from "./Component/PartyAccount";
 import AddEmployee from "./Component/AddEmployee";
 import AddExpense from "./Component/AddExpense";
-import Status from "./Component/status";
+import Status from "./Component/Status";
 import Attendance from "./Attendance";
 import Payment from "./Payment";
 import Loading from "./Component/Loading";
