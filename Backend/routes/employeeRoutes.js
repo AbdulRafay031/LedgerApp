@@ -8,7 +8,7 @@ router.get("/", async (req, res) => {
       const employees = await Employee.find();
       res.status(200).json(employees);
     } catch (error) {
-      res.status(500).json({ message: "Error fetching employee", error });
+      res.status(500).json({ message: "Error fetching check employee", error });
     }
   });
 
